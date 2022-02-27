@@ -1,10 +1,12 @@
-package ru.shishkin.application;
+package ru.shishkin.gaussSeidelMethod;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class Frame extends JFrame {
 
@@ -50,7 +52,6 @@ public class Frame extends JFrame {
                 textField_4.setVisible(true);
                 textField_5.setVisible(true);
 
-
                 rezultat=getResault(V,lymbda,mu);
 
                 textArea_1.setText(rezultat);
@@ -76,15 +77,12 @@ public class Frame extends JFrame {
         label_1.setBounds(326, 92, 120, 14);
         contentPane.add(label_1);
 
-		/*
 		Image myPicture = null;
         try {
-			myPicture = ImageIO.read(new File("D:\\Files\\MakShish\\Desktop\\�����\\��� ��������\\��� �����\\���������\\���������\\image3.PNG"));
+            myPicture = ImageIO.read(getClass().getClassLoader().getResource("ImageForGaussSeidelMethod.PNG"));
 		} catch (IOException e) {
-			// TODO ������������� ��������� ���� catch
-			// e.printStackTrace();
+			e.printStackTrace();
 		}
-		 */
 
         textField = new JTextField();
         textField.setBounds(10, 44, 131, 20);
@@ -139,10 +137,10 @@ public class Frame extends JFrame {
         textField_5.setBounds(208, 239, 24, 20);
         textField_5.setVisible(false);
         contentPane.add(textField_5);
-		/*
+
 		JLabel picLabel = new JLabel(new ImageIcon(myPicture));
 		picLabel.setBounds(10, 75, 272, 250);
-		contentPane.add(picLabel);*/
+		contentPane.add(picLabel);
 
         setVisible(true);
     }

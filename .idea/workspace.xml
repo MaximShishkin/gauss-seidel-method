@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3690d9de-17ad-4208-b239-64c8586dd98c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,15 +24,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Files\MakShish\Desktop\awdaw\GaussSeidelMethod\src\main\resources" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.shishkin.application.Application" />
+      <option name="MAIN_CLASS_NAME" value="ru.shishkin.gaussSeidelMethod.Application" />
       <module name="GaussSeidelMethod" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.shishkin.application.*" />
+          <option name="PATTERN" value="ru.shishkin.gaussSeidelMethod.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -42,7 +50,7 @@
       <module name="GaussSeidelMethod" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.shishkin.application.*" />
+          <option name="PATTERN" value="ru.shishkin.gaussSeidelMethod.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
