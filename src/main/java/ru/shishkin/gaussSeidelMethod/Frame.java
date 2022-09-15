@@ -9,7 +9,6 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 
 public class Frame extends JFrame {
-
     private JPanel contentPane;
     private JTextArea textArea_1;
     private JScrollPane scrollPane;
@@ -25,7 +24,6 @@ public class Frame extends JFrame {
     private JTextField textField_5;
 
     public Frame() {
-
         setTitle("\u041A\u0430\u043B\u044C\u043A\u0443\u043B\u044F\u0442\u043E\u0440 \u043E\u0446\u0435\u043D\u043A\u0438 \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u0430 \u043E\u0431\u0441\u043B\u0443\u0436\u0438\u0432\u0430\u043D\u0438\u044F \u043A\u043E\u043D\u0442\u0430\u043A\u0442-\u0446\u0435\u043D\u0442\u0440\u0430");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 605, 364);
@@ -38,24 +36,25 @@ public class Frame extends JFrame {
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 String rezultat;
-                double V,lymbda,mu;
+                double V, lymbda, mu;
 
-                V=Double.parseDouble(textField.getText());
-                lymbda=Double.parseDouble(textField_1.getText());
-                mu=Double.parseDouble(textField_2.getText());
+                V = Double.parseDouble(textField.getText());
+                lymbda = Double.parseDouble(textField_1.getText());
+                mu = Double.parseDouble(textField_2.getText());
 
-                textField_3.setText(""+lymbda);
-                textField_4.setText(""+mu);
-                textField_5.setText(""+V);
+                textField_3.setText("" + lymbda);
+                textField_4.setText("" + mu);
+                textField_5.setText("" + V);
 
                 textField_3.setVisible(true);
                 textField_4.setVisible(true);
                 textField_5.setVisible(true);
 
-                rezultat=getResault(V,lymbda,mu);
+                rezultat = getResault(V, lymbda, mu);
 
                 textArea_1.setText(rezultat);
-            }});
+            }
+        });
         button.setBounds(475, 24, 107, 40);
         contentPane.add(button);
 
@@ -77,12 +76,12 @@ public class Frame extends JFrame {
         label_1.setBounds(326, 92, 120, 14);
         contentPane.add(label_1);
 
-		Image myPicture = null;
+        Image myPicture = null;
         try {
             myPicture = ImageIO.read(getClass().getClassLoader().getResource("ImageForGaussSeidelMethod.PNG"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         textField = new JTextField();
         textField.setBounds(10, 44, 131, 20);
@@ -138,23 +137,22 @@ public class Frame extends JFrame {
         textField_5.setVisible(false);
         contentPane.add(textField_5);
 
-		JLabel picLabel = new JLabel(new ImageIcon(myPicture));
-		picLabel.setBounds(10, 75, 272, 250);
-		contentPane.add(picLabel);
+        JLabel picLabel = new JLabel(new ImageIcon(myPicture));
+        picLabel.setBounds(10, 75, 272, 250);
+        contentPane.add(picLabel);
 
         setVisible(true);
     }
 
-    private String getResault(double V,double lymbda,double mu) {
+    private String getResault(double V, double lymbda, double mu) {
         // lymbda = 5;
         // mu = 1;
         // V = 10;
         double epsilon = 0.0000000001;
-        double P[] = new double[(int)(V+1)];
+        double P[] = new double[(int) (V + 1)];
         String rezultat = "";
-        for (int i = 0; i <= V; i++)
-        {
-            P[i]=1;
+        for (int i = 0; i <= V; i++) {
+            P[i] = 1;
         }
 
         double noi = 1;
@@ -164,53 +162,49 @@ public class Frame extends JFrame {
         double rp;
         double dif;
 
-        do
-        {
-            ncp=ncc;
-            ncc=0;
+        do {
+            ncp = ncc;
+            ncc = 0;
 
-            for (int i = 0; i <= V; i++)
-            {
-                lp=0;
-                if (i<V) lp=lp+lymbda;
-                if (i>0) lp=lp+i*mu;
-                rp=0;
-                if (i>0) rp=rp+P[i-1]*lymbda;
-                if (i<V) rp=rp+P[i+1]*(i+1)*mu;
-                P[i]=rp/lp;
-                ncc=ncc+P[i];
+            for (int i = 0; i <= V; i++) {
+                lp = 0;
+                if (i < V) lp = lp + lymbda;
+                if (i > 0) lp = lp + i * mu;
+                rp = 0;
+                if (i > 0) rp = rp + P[i - 1] * lymbda;
+                if (i < V) rp = rp + P[i + 1] * (i + 1) * mu;
+                P[i] = rp / lp;
+                ncc = ncc + P[i];
             }
             noi++;
-            dif=Math.abs(ncc-ncp)/ncc;
+            dif = Math.abs(ncc - ncp) / ncc;
         }
 
-        while(dif>epsilon && noi<1000);
+        while (dif > epsilon && noi < 1000);
 
-        for (int i = 0; i <= V; i++)
-        {
-            P[i]=P[i]/ncc;
-            rezultat=rezultat+"P("+i+")="+P[i]+"\n";
-            System.out.println("P("+i+")="+P[i]);
+        for (int i = 0; i <= V; i++) {
+            P[i] = P[i] / ncc;
+            rezultat = rezultat + "P(" + i + ")=" + P[i] + "\n";
+            System.out.println("P(" + i + ")=" + P[i]);
         }
 
         double p = 0;
         double m = 0;
 
-        for (int i = 0; i <= V; i++)
-        {
-            if (i==V) p=P[i];
-            if (i>0) m=m+P[i]*i;
+        for (int i = 0; i <= V; i++) {
+            if (i == V) p = P[i];
+            if (i > 0) m = m + P[i] * i;
         }
 
-        dif=lymbda-lymbda*p-m*mu;
-        rezultat=rezultat+"Доля потерянных заявок: "+"\n";
-        rezultat=rezultat+""+p+"\n";
-        rezultat=rezultat+"Среднее количество занятых операторов: "+"\n";
-        rezultat=rezultat+""+m+"\n";
+        dif = lymbda - lymbda * p - m * mu;
+        rezultat = rezultat + "Доля потерянных заявок: " + "\n";
+        rezultat = rezultat + "" + p + "\n";
+        rezultat = rezultat + "Среднее количество занятых операторов: " + "\n";
+        rezultat = rezultat + "" + m + "\n";
 
-        System.out.println("Pc="+p);
-        System.out.println("m="+m);
-        System.out.println("dif="+dif);
+        System.out.println("Pc=" + p);
+        System.out.println("m=" + m);
+        System.out.println("dif=" + dif);
         return rezultat;
     }
 }
