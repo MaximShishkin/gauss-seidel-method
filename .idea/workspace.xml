@@ -31,7 +31,7 @@
       <recent name="D:\Files\MakShish\Desktop\awdaw\GaussSeidelMethod\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.GaussSeidelMethod-1.0-SNAPSHOT.jar">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.shishkin.gaussSeidelMethod.Application" />
       <module name="GaussSeidelMethod" />
@@ -64,8 +64,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.GaussSeidelMethod-1.0-SNAPSHOT.jar" />
         <item itemvalue="Application.Application" />
+        <item itemvalue="JAR Application.GaussSeidelMethod-1.0-SNAPSHOT.jar" />
         <item itemvalue="Application.start" />
       </list>
     </recent_temporary>

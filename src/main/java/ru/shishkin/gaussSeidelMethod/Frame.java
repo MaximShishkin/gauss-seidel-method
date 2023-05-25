@@ -145,12 +145,10 @@ public class Frame extends JFrame {
     }
 
     private String getResault(double V, double lymbda, double mu) {
-        // lymbda = 5;
-        // mu = 1;
-        // V = 10;
         double epsilon = 0.0000000001;
         double P[] = new double[(int) (V + 1)];
         String rezultat = "";
+
         for (int i = 0; i <= V; i++) {
             P[i] = 1;
         }
@@ -176,6 +174,7 @@ public class Frame extends JFrame {
                 P[i] = rp / lp;
                 ncc = ncc + P[i];
             }
+
             noi++;
             dif = Math.abs(ncc - ncp) / ncc;
         }
@@ -185,7 +184,7 @@ public class Frame extends JFrame {
         for (int i = 0; i <= V; i++) {
             P[i] = P[i] / ncc;
             rezultat = rezultat + "P(" + i + ")=" + P[i] + "\n";
-            System.out.println("P(" + i + ")=" + P[i]);
+            // System.out.println("P(" + i + ")=" + P[i]);
         }
 
         double p = 0;
@@ -202,9 +201,12 @@ public class Frame extends JFrame {
         rezultat = rezultat + "Среднее количество занятых операторов: " + "\n";
         rezultat = rezultat + "" + m + "\n";
 
+        /*
         System.out.println("Pc=" + p);
         System.out.println("m=" + m);
         System.out.println("dif=" + dif);
+         */
+
         return rezultat;
     }
 }
