@@ -1,4 +1,4 @@
-package ru.shishkin.gaussSeidelMethod;
+package ru.shishkin.maxim.gaussSeidelMethod;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -78,7 +78,7 @@ public class Frame extends JFrame {
 
         Image myPicture = null;
         try {
-            myPicture = ImageIO.read(getClass().getClassLoader().getResource("ImageForGaussSeidelMethod.PNG"));
+            myPicture = ImageIO.read(getClass().getClassLoader().getResource("image.PNG"));
         } catch (IOException e) {
             e.printStackTrace();
         }

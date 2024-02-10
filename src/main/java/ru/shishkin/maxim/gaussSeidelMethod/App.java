@@ -1,6 +1,6 @@
-package ru.shishkin.gaussSeidelMethod;
+package ru.shishkin.maxim.gaussSeidelMethod;
 
-public class Application {
+public class App {
     public static void main(String[] args) {
         new Frame();
     }

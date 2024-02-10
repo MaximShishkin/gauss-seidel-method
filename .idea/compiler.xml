@@ -9,8 +9,5 @@
         <module name="GaussSeidelMethod" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="GaussSeidelMethod" target="15" />
-    </bytecodeTargetLevel>
   </component>
 </project>
