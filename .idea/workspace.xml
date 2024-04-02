@@ -17,21 +17,25 @@
       </list>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="22eVrqrqU2caHIdnQnb1oOCsR2M" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.App.executor": "Run",
+    "Application.Application.executor": "Run",
+    "Maven.GaussSeidelMethod [clean].executor": "Run",
+    "Maven.GaussSeidelMethod [install].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Admin/Desktop/gitt/gauss-seidel-method",
-    "project.structure.last.edited": "Modules",
+    "last_opened_file_path": "C:/Users/Admin/Desktop/gitt/test-tasks",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -39,10 +43,10 @@
       <recent name="D:\Files\MakShish\Desktop\awdaw\GaussSeidelMethod\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.shishkin.maxim.gaussSeidelMethod.App" />
-      <module name="GaussSeidelMethod" />
+      <module name="gauss-seidel-method" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ru.shishkin.gaussSeidelMethod.*" />
@@ -55,7 +59,7 @@
     </configuration>
     <configuration name="start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.shishkin.application.start" />
-      <module name="GaussSeidelMethod" />
+      <module name="gauss-seidel-method" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ru.shishkin.gaussSeidelMethod.*" />
@@ -72,7 +76,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.App" />
         <item itemvalue="JAR Application.GaussSeidelMethod-1.0-SNAPSHOT.jar" />
         <item itemvalue="Application.start" />
       </list>
